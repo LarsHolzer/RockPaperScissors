@@ -4,7 +4,7 @@ function getComputerChoice() {
     let choice = options[Math.floor(Math.random()*options.length)];
     return choice;
 }
-let computerChoice = getComputerChoice();
+const computerChoice = getComputerChoice();
 
 // Get player input and convert it to lowercase
 function getUserInput() {
@@ -12,23 +12,23 @@ function getUserInput() {
     playerInput = playerInput.toLowerCase();
     return playerInput;
 }
-let playerChoice = getUserInput();
+const playerChoice = getUserInput();
 
 // Pick winner
-function playRound() {
+function playRound(computerChoice, playerChoice) {
     if (computerChoice === playerChoice) {
         return "This is a draw."
     } else if (computerChoice === "rock" && playerChoice === "scissors") {
-        console.log("You lose! Rock beats Scissors")
+        return "You lose! Rock beats Scissors";
     } else if (computerChoice === "paper" && playerChoice === "scissors") {
-        console.log("You won! Scissors beats Paper")
+        return "You won! Scissors beats Paper";
     } else if (computerChoice === "paper" && playerChoice === "rock") {
-        console.log("You lost! Paper beats Rock") 
+        return "You lost! Paper beats Rock" ;
     } else if (computerChoice === "scissors" && playerChoice === "rock") {
-        console.log("You won! Rock beats Scissors")
+        return "You won! Rock beats Scissors" ;
     } else if (computerChoice === "rock" && playerChoice === "paper") {
-        console.log("You won! Paper beats Rock") 
+        return "You won! Paper beats Rock" ;
     } else if (computerChoice === "scissors" && playerChoice === "paper") {
-        console.log("You lost! Scissors beats paper")
+        return "You lost! Scissors beats paper";
     }
 }
