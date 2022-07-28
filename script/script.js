@@ -4,7 +4,6 @@ function getComputerChoice() {
     let choice = options[Math.floor(Math.random()*options.length)];
     return choice;
 }
-const computerChoice = getComputerChoice();
 
 // Get player input and convert it to lowercase
 function getUserInput() {
@@ -12,7 +11,6 @@ function getUserInput() {
     playerInput = playerInput.toLowerCase();
     return playerInput;
 }
-const playerChoice = getUserInput();
 
 // Pick winner
 function playRound(computerChoice, playerChoice) {
@@ -30,5 +28,14 @@ function playRound(computerChoice, playerChoice) {
         return "You won! Paper beats Rock" ;
     } else if (computerChoice === "scissors" && playerChoice === "paper") {
         return "You lost! Scissors beats paper";
+    }
+}
+
+function game() {
+    for (let i = 0; i < 5 ; i++) {
+        let computerChoice = getComputerChoice();
+        let playerChoice = getUserInput();
+        playRound(computerChoice, playerChoice)
+        console.log(playRound(computerChoice,playerChoice))
     }
 }
