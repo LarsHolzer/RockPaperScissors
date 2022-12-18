@@ -15,11 +15,7 @@ function getComputerChoice() {
 
 //Display winner
 function winnerDisplay(winner) {
-    let resultContainer = document.getElementById("results");
-    let para = document.createElement("p");
-    para.textContent = winner;
-
-    resultContainer.appendChild(para);
+    document.getElementById('game_result').innerText = winner
 }
 
 // Declare a winner
@@ -27,6 +23,7 @@ function declareWinner() {
     if(playerScore === 5) {
         let resultContainer = document.getElementById("results");
         let para = document.createElement("p");
+        para.classList.add("winner");
         para.textContent = "You won the game!";
 
         resultContainer.appendChild(para);
@@ -34,6 +31,7 @@ function declareWinner() {
     if (computerScore === 5) {
         let resultContainer = document.getElementById("results");
         let para = document.createElement("p");
+        para.classList.add("winner");
         para.textContent = "You lost the game!";
 
         resultContainer.appendChild(para);

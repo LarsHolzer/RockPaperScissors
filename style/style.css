@@ -1,0 +1,23 @@
+body {
+    background-color: grey;
+}
+
+#section {
+    background-color: lightgray;
+    border: 2px solid black;
+    display: inline-block;
+    box-shadow: 2px grey;
+    padding: 5em;
+}
+
+#score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.winner {
+    background-color: red;
+}
